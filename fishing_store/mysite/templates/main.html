@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Рыболовные товары</title>
+</head>
+<body>
+    <h1>Магазин "Рыболовные снасти"</h1>
+
+    {% for product in products %}
+    <div class="product">
+        <h2>{{ product.name }}</h2>
+        <div class="category">{{ product.category }}</div>
+        <p class="price">{{ product.price }} ₽</p>
+        <p>В наличии: {{ product.quantity }} шт.</p>
+        <p>{{ product.description }}</p>
+    </div>
+    {% endfor %}
+</body>
+</html>
